@@ -1,0 +1,17 @@
+{
+  "name": "Our Space",
+  "short_name": "Our Space",
+  "description": "Shared date night and memory vault",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff1f2",
+  "theme_color": "#f43f5e",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
