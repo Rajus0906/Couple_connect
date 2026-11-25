@@ -1,0 +1,14 @@
+name: supabase-keepalive
+on:
+  schedule:
+    - cron: '0 12 */3 * *'
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query Supabase
+        run: |
+          curl -f -s "${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}/rest/v1/wishlist?select=id&limit=1" \
+            -H "apikey: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}" \
+            -H "Authorization: Bearer ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}"
